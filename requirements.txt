@@ -1,0 +1,16 @@
+asgiref==3.8.1             # Soporte para ASGI (funciones asíncronas en Django)
+Django==5.2.1              # Framework web principal
+
+django-cors-headers==3.13.0  # Permite peticiones entre frontend y backend (CORS)
+django-environ==0.9.0        # Manejo de variables de entorno (.env)
+django-jazzmin==3.0.1        # Mejora visual del panel admin de Django
+django-js-asset==2.2.0       # Manejo de archivos JS en formularios/admin
+django-storages==1.13.1      # Soporte para almacenar archivos en la nube (S3, etc.)
+djangorestframework==3.14.0  # Herramientas para crear APIs REST
+
+pillow==11.1.0             # Soporte para imágenes (requerido por ImageField)
+psycopg2==2.9.10           # Conector para base de datos PostgreSQL
+pytz==2025.1               # Zonas horarias para fechas
+sqlparse==0.5.3            # Parseo/formateo de SQL (usado internamente)
+typing_extensions==4.12.2  # Tipado avanzado compatible con versiones viejas
+tzdata==2025.2             # Base de datos de zonas horarias (útil en entornos sin sistema)
