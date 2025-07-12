@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'LilitaOne';
+    src: url('./fonts/LilitaOne-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('./fonts/Outfit-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#h1_home {
+    font-family: "LilitaOne";
+}
+
+#h2_home,
+#h3_home,
+#h3_home_2 {
+    font-family: "Outfit";
+}
+
+#p_home {
+    font-family: "Roboto";
+}
