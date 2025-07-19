@@ -4,7 +4,7 @@ import perfil from '../../assets/img/blog/perfil.jpg'
 const Navbar_vertical = () => {
   return (
     <div className=' flex flex-col justify-center flex-1 h-screen bg-yellow-500'>
-      <div className=' h-[33%] bg-gray-600 flex items-center justify-center '>
+      <div className=' h-[33%] bg-gray-500 flex items-center justify-center '>
 
         <img src={perfil} alt="" className='w-[170px] h-[170px] rounded-full object-cover border-4 border-white' />
 

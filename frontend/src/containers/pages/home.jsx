@@ -6,6 +6,9 @@ import AboutMe_component from '../../components/aboutMe/aboutMe_component'
 import Navbar_vertical from '../../components/Navigation/navbar_vertical'
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
+import Portfolio from '../../components/portfolio/portfolio_component'
+import Blog_component from '../../components/blog/blog_component'
+import Contact_component from '../../components/contact/contact_component'
 
 const Home = () => {
 
@@ -63,7 +66,7 @@ const Home = () => {
         <AnimatePresence>
 
           {showNavbar && (
-            <div className='fixed w-[20%] top-0 left-0 '>
+            <div className='fixed w-[20%] z-10 top-0 left-0 '>
               <motion.nav
                 // initial={{ opacity: 0, y: -50 }}
                 // animate={{ opacity: 1, y: 0 }}
@@ -85,8 +88,10 @@ const Home = () => {
         </AnimatePresence>
 
       </div>
+      <Portfolio/>
       <AboutMe_component />
-      <AboutMe_component />
+      <Blog_component/>
+      <Contact_component/>
 
 
 

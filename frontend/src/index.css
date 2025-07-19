@@ -26,7 +26,11 @@ html {
     font-style: normal;
 }
 
-#h1_home {
+#h1_home,
+#h1_portfolio,
+#h1_aboutMe,
+#h1_blog_component,
+#h1_contact_component {
     font-family: "LilitaOne";
 }
 

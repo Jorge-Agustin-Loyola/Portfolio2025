@@ -1,10 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-const AboutMe_component = () => {
-  return (
- <div className='h-screen ml-[20%] mt-[20px] p-4 relative'>
-      <h1 id='h1_aboutMe' className='m-10 ml-12 p-2 text-[80px]  font-bold '>
-        <svg
+
+const Blog_component = () => {
+    return (
+        <section className='bg-gray-300'>
+            
+            <div className='h-screen ml-[20%] mt-[20px] p-4 relative'>
+                <h1 id='h1_blog_component' className='m-10 ml-12 p-2 text-[80px] '>
+                    <svg
             className="w-[30px] h-[40px] text-black fill-current rotate-90 absolute top-25 left-5"
             viewBox="0 0 3.8379681 108.93936"
             xmlns="http://www.w3.org/2000/svg"
@@ -37,25 +40,24 @@ const AboutMe_component = () => {
                 r="7.2331014" />
             </g>
           </svg>
-        
-        ABOUT ME</h1>
-      <div className='flex'>
-        <div>
-          <NavLink>
-            <img src="" alt="" />
-          </NavLink>
-        </div>
-        <div>
-          <NavLink>
-            <img src="" alt="" />
-          </NavLink>
-        </div>
-      </div>
+                    BLOG</h1>
+                <div className='flex'>
+                    <div>
+                        <NavLink>
+                            <img src="" alt="" />
+                        </NavLink>
+                    </div>
+                    <div>
+                        <NavLink>
+                            <img src="" alt="" />
+                        </NavLink>
+                    </div>
+                </div>
 
 
-    </div>
-    
-  )
+            </div>
+        </section>
+    )
 }
 
-export default AboutMe_component
+export default Blog_component
