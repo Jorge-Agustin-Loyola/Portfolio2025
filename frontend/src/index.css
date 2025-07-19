@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'LilitaOne';
     src: url('./fonts/LilitaOne-Regular.woff2') format('woff2');
@@ -27,7 +32,14 @@
 
 #h2_home,
 #h3_home,
-#h3_home_2 {
+#h3_home_2,
+#item_nav_vertical1,
+#item_nav_vertical2,
+#item_nav_vertical3,
+#item_nav_vertical4,
+#item_nav_vertical5
+
+ {
     font-family: "Outfit";
 }
 

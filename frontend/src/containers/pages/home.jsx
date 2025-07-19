@@ -5,19 +5,22 @@ import Nav_home from '../../components/home/nav_home'
 import AboutMe_component from '../../components/aboutMe/aboutMe_component'
 import Navbar_vertical from '../../components/Navigation/navbar_vertical'
 import { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from "framer-motion"
 
 const Home = () => {
 
+  // LOGICA PARA MOSTRAR LA BARRA DE NAVEGACION VERTICAL
   const [showNavbar, setShowNavbar] = useState(false)
 
-  useEffect(()=>{
-    const handleScroll = ()=>{
+
+  useEffect(() => {
+    const handleScroll = () => {
       const scrolledPastFirstScreen = window.scrollY > window.innerHeight;
       setShowNavbar(scrolledPastFirstScreen)
     }
     window.addEventListener('scroll', handleScroll)
-    return ()=> window.removeEventListener('scroll', handleScroll)
-  },[])
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <>
@@ -45,7 +48,7 @@ const Home = () => {
 
           {/* FOTO y BOTONES */}
           <div className='w-[55%]  p-[40px] flex items-center justify-center '>
-              <Nav_home/>
+            <Nav_home />
           </div>
 
 
@@ -56,20 +59,37 @@ const Home = () => {
           <div className="bg-yellow-500 w-full h-[33%]"></div>
           <div className=' w-full h-[33%]'></div>
         </div>
-        {showNavbar && (
-          <div className='fixed top-0 left-0 '>
 
-            <Navbar_vertical/>
-          </div>
+        <AnimatePresence>
 
-        )}
+          {showNavbar && (
+            <div className='fixed w-[20%] top-0 left-0 '>
+              <motion.nav
+                // initial={{ opacity: 0, y: -50 }}
+                // animate={{ opacity: 1, y: 0 }}
+                // exit={{ opacity: 0, y: -50 }}
+                // transition={{ duration: 0.5, ease: "easeOut" }}
+
+                initial={{ opacity: 0, rotateY: -90, transformOrigin: "left" }}
+                animate={{ opacity: 1, rotateY: 0 }}
+                exit={{ opacity: 0, rotateY: -90,  transition: { duration: 0.3 }}}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className=" top-0   shadow-lg z-50"
+              >
+
+                <Navbar_vertical />
+              </motion.nav>
+            </div>
+
+          )}
+        </AnimatePresence>
 
       </div>
-      <AboutMe_component/>
-      <AboutMe_component/>
+      <AboutMe_component />
+      <AboutMe_component />
 
 
-    
+
     </>
 
   )
