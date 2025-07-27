@@ -1,7 +1,8 @@
 import React from 'react'
 import perfil from '../../assets/img/blog/perfil.jpg'
+import { NavLink } from 'react-router-dom'
 
-const Navbar_vertical = () => {
+const Navbar_vertical = ({scrollTo}) => {
   return (
     <div className=' flex flex-col justify-center flex-1 h-screen bg-yellow-500'>
       <div className=' h-[33%] bg-gray-500 flex items-center justify-center '>
@@ -11,7 +12,7 @@ const Navbar_vertical = () => {
       </div>
       <nav className='p-2 flex flex-col gap-6 justify-center items-center  my-auto'>
 
-        <a id='item_nav_vertical1' className='p-2 font-semibold flex flex-col items-center gap-2' href="">
+        <NavLink onClick={() => scrollTo('home')} id='item_nav_vertical1' className='p-2 font-semibold flex flex-col items-center gap-2' href="">
           <svg
             className="w-[10px] h-[40px] text-black fill-current"
             viewBox="0 0 16.350164 50.249077"
@@ -26,11 +27,11 @@ const Navbar_vertical = () => {
           </svg>
 
 
-          HOME </a>
-        <a id='item_nav_vertical3' className='p-2 font-semibold' href="">PORTFOLIO</a>
-        <a id='item_nav_vertical2' className='p-2 font-semibold' href="">ABOUT ME</a>
-        <a id='item_nav_vertical4' className='p-2 font-semibold' href="">BLOG</a>
-        <a id='item_nav_vertical5' className='p-2 font-semibold flex flex-col items-center gap-2' href="">
+          HOME </NavLink>
+        <NavLink onClick={() => scrollTo('portfolio')} id='item_nav_vertical3' className='p-2 font-semibold' href="">PORTFOLIO</NavLink>
+        <NavLink onClick={() => scrollTo('aboutMe')} id='item_nav_vertical2' className='p-2 font-semibold' href="">ABOUT ME</NavLink>
+        <NavLink onClick={() => scrollTo('blog')} id='item_nav_vertical4' className='p-2 font-semibold' href="">BLOG</NavLink>
+        <NavLink onClick={() => scrollTo('contact')} id='item_nav_vertical5' className='p-2 font-semibold flex flex-col items-center gap-2' href="">
           CONTACTO
           <svg
             className="w-[10px] h-[40px] text-black fill-current rotate-180"
@@ -45,7 +46,7 @@ const Navbar_vertical = () => {
             </g>
           </svg>
 
-        </a>
+        </NavLink>
 
       </nav>
     </div>
